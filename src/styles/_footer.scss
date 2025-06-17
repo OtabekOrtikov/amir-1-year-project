@@ -1,0 +1,41 @@
+@use "./kit/variables" as variables;
+
+.footer {
+  width: 100%;
+  height: auto;
+  padding: 80px 0;
+  background-color: variables.$secondary-color;
+
+  &_content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+
+    &--item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      p {
+        color: rgba(255, 255, 255, 0.7);
+        font-family: "Source Sans Pro";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px; /* 118.75% */
+      }
+
+      h2 {
+        color: #fff;
+        font-family: "Source Sans Pro";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 88.889% */
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

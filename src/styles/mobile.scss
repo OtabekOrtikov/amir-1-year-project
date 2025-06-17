@@ -1,0 +1,77 @@
+@use "./kit/mixins" as mixins;
+
+@include mixins.media("sm") {
+  .header {
+    &_nav {
+      #nav-toggle {
+        &:checked + .header_nav--menu {
+          display: block;
+        }
+      }
+      &--menu {
+        position: absolute;
+        top: 70px;
+        right: 15px;
+        display: none;
+      }
+
+      &--toggle {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &_hero {
+      align-items: center;
+      &--title {
+        flex-direction: column;
+        h1 {
+          color: #fff;
+          text-align: center;
+          font-family: Aclonica;
+          font-size: 3.5625rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 4.3125rem; /* 121.053% */
+        }
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  .main {
+    &_content {
+      flex-wrap: wrap;
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  .footer {
+    &_content {
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: center;
+
+      &--item {
+        width: 100%;
+        &:first-child {
+          order: 2;
+          text-align: center;
+          
+        }
+
+        &:nth-child(2) {
+          order: 1;
+        }
+        &:last-child {
+          order: 3;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@use "./kit/variables" as variables;
+
+.main {
+  width: 100%;
+  height: auto;
+  background-color: variables.$pink-color;
+  padding: 80px 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  &_title {
+    color: variables.$secondary-color;
+    text-align: center;
+    font-family: Aclonica;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 61.5px; /* 166.216% */
+    max-width: 750px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  &_subtitle {
+    color: #40403f;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 133.333% */
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  &_content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 80px;
+
+    p {
+      width: 45%;
+      color: #171111;
+      font-family: "Source Sans Pro";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px; /* 137.5% */
+    }
+  }
+
+  &_link {
+    color: variables.$secondary-color;
+    text-align: center;
+    font-family: Oswald;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 185.714% */
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    background-color: variables.$primary-color;
+    padding: 5px 18px;
+    border-radius: 18px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: rotate(15deg);
+      transform-origin: 45% 50%;
+    }
+  }
+}
