@@ -112,6 +112,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      img {
+        animation: logo-animation 3s infinite;
+      }
+
       h1 {
         color: #fff;
         font-family: Aclonica;
@@ -134,5 +139,17 @@
       max-width: 450px;
       text-align: left;
     }
+  }
+}
+
+@keyframes logo-animation {
+  0% {
+    transform: scale(1) rotateY(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotateY(180deg);
+  }
+  100% {
+    transform: scale(1) rotateY(360deg);
   }
 }
